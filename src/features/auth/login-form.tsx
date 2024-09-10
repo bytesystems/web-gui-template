@@ -26,6 +26,7 @@ import {
 import {useLoginMutation} from "@/features/auth/auth-service.ts";
 import {useAppDispatch} from "@/app/store.ts";
 import {setCredentials} from "@/features/auth/auth-slice.ts";
+import {useNavigate} from "react-router-dom";
 
 const FormSchema = z.object({
     username: z.string().min(2, {message: "Username must be at least 2 characters.",    }),
@@ -33,6 +34,9 @@ const FormSchema = z.object({
 })
 
 export function InputForm() {
+
+    const navigate = useNavigate();
+
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -52,6 +56,8 @@ export function InputForm() {
                 title: "Login Successful",
                 description: `Welcome, ${data.username}!`,
             });
+
+            navigate('/gated', { replace: true });
         } catch (err) {
             toast({
                 title: "Login Failed",
