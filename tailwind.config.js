@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
   	extend: {
+			keyframes: {
+				slideInFromLeft: {
+					'0%': { transform: 'translateX(-5rem)', opacity: 0 },
+					'100%': { transform: 'translateX(0)', opacity: 1 },
+				},
+			},
+			animation: {
+				'slide-in': 'slideInFromLeft 500ms ease-out',
+			},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
