@@ -1,5 +1,5 @@
 import HeaderFixed from "@/components/layout/header-fixed.tsx";
-import Sidebar from "@/components/layout/sidebar";
+import Sidebar from "@/components/layout/navigation/sidebar.tsx";
 import {
     DropdownMenu,
     DropdownMenuContent, DropdownMenuItem,
@@ -23,11 +23,11 @@ import {Input} from "@/components/ui/input.tsx";
 export const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
-            <div className="flex min-h-screen w-full flex-col bg-muted/40">
+            <div className="flex min-h-screen w-full overflow-hidden">
                 {/*<HeaderFixed />*/}
                 <Sidebar/>
 
-                <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+                <div className="flex flex-col sm:gap-4 p-12 w-full">
                     <header
                         className="sticky top-0 z-15 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
                         <Sheet>
@@ -130,7 +130,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </header>
-                    <main className="grid flex-1 items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4">
+                    <main className="grid items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4">
                         {children}
                     </main>
                 </div>

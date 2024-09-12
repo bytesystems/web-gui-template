@@ -6,6 +6,7 @@ import {Provider} from "react-redux";
 import {Layout} from "@/components/layout";
 import {BrowserRouter} from "react-router-dom";
 import {Dialog} from "@radix-ui/react-dialog";
+import TestPage from "@/pages/test-page.tsx";
 
 function App() {
     return (
@@ -13,10 +14,8 @@ function App() {
             <Provider store={store}>
                 <TooltipProvider>
                     <Dialog>
-                    <Layout>
-                        <AppRoutes />
-                        <Toaster />
-                    </Layout>
+                            <AppRoutes />
+                            <Toaster />
                     </Dialog>
                 </TooltipProvider>
             </Provider>

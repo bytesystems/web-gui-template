@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MenuIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet.tsx";
-import { SideNav } from "@/components/layout/side-nav";
+import { SideNav } from "@/components/layout/navigation/side-nav.tsx";
 import { NavItems } from "@/components/constants/side-nav";
 
 export const MobileSidebar = () => {

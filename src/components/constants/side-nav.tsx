@@ -37,6 +37,36 @@ export const NavItems: NavItem[] = [
     icon: BarChart2, // Reports icon
     href: "/reports",
     color: "text-purple-500",
+    children: [
+      {
+        title: "Report1",
+        icon: BarChart2, // Reports icon
+        href: "/reports/1",
+        color: "text-purple-500",
+        isChild: true,
+      },
+      {
+        title: "Report2",
+        icon: BarChart2, // Reports icon
+        href: "/reports/2",
+        color: "text-purple-500",
+        isChild: true,
+      },
+      {
+        title: "Report3",
+        icon: BarChart2, // Reports icon
+        href: "/reports/3",
+        color: "text-purple-500",
+        isChild: true,
+      },
+      {
+        title: "Report4",
+        icon: BarChart2, // Reports icon
+        href: "/reports/4",
+        color: "text-purple-500",
+        isChild: true,
+      }
+    ]
   },
   {
     title: "Documents",
